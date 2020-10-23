@@ -83,7 +83,7 @@ function setupSquares(){
 	}
 }
 
-// determines the name and color of the question asked//
+// determines the name and color of the question asked as well as lead it to the html page//
 async function updateColorName(){
 	const regex = /\([^\)]+\)/g; 
 	var rgbColors = pickedColor.match(regex); 
@@ -124,7 +124,7 @@ function reset(){
 	}
 	h1.style.background = "steelblue";
 }
-// plays noise whenever a square is clicked//
+// resets game when clicked//
 resetButton.addEventListener("click", function(){
 	reset();
 })
@@ -153,7 +153,7 @@ function generateRandomColors(num){
 	//return that array
 	return arr;
 }
-//determines the exact color number//
+//determines the exact color number and what color those numbers will produce when combined//
 function randomColor(){
 	//pick a "red" from 0 - 255
 	var r = Math.floor(Math.random() * 256);
